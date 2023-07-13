@@ -1,19 +1,21 @@
-<section class="d-flex flex-column">
-  <div class="user-action-menu mb-2">
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-      <mat-button-toggle value="Profile" [routerLink]="['profile']" [routerLinkActive]="['active']"
-        [routerLinkActiveOptions]="{exact: true}">Profile</mat-button-toggle>
-      <mat-button-toggle value="Add Users" [routerLink]="['adduser']" [routerLinkActive]="['active']"
-        [routerLinkActiveOptions]="{exact: true}">Add Users</mat-button-toggle>
-      <mat-button-toggle value="Manage Users" [routerLink]="['manageuser']" [routerLinkActive]="['active']"
-        [routerLinkActiveOptions]="{exact: true}">Manage Users</mat-button-toggle>
-      <mat-button-toggle value="Manage Users" [routerLink]="['manageuser']" [routerLinkActive]="['active']"
-        [routerLinkActiveOptions]="{exact: true}">Role Manager</mat-button-toggle>
-      <mat-button-toggle value="Add new submissions" [routerLink]="['addsubmissions']"
-        [routerLinkActive]="['active']">Add new submissions</mat-button-toggle>
-      <mat-button-toggle value="Submissions" [routerLink]="['submitioncenter']"
-        [routerLinkActive]="['active']">Submissions</mat-button-toggle>
-    </mat-button-toggle-group>
-  </div>
-  <router-outlet></router-outlet>
-</section>
+<div class="main-admin-container">
+  <section class="d-flex flex-column">
+    <div class="user-action-menu mb-2">
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="Profile" [routerLink]="['profile']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Profile</mat-button-toggle>
+        <mat-button-toggle value="Add Users" [routerLink]="['adduser']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Add Users</mat-button-toggle>
+        <mat-button-toggle value="Manage Users" [routerLink]="['manageuser']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Manage Users</mat-button-toggle>
+        <mat-button-toggle value="Manage Users" [routerLink]="['manageuser']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Role Manager</mat-button-toggle>
+        <mat-button-toggle value="Add new submissions" [routerLink]="['addsubmissions']"
+          [routerLinkActive]="['active']">Add new submissions</mat-button-toggle>
+        <mat-button-toggle value="Submissions" [routerLink]="['submitioncenter']"
+          [routerLinkActive]="['active']">Submissions</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <router-outlet></router-outlet>
+  </section>
+</div>

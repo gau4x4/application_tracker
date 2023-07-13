@@ -1,11 +1,20 @@
-<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-  <mat-button-toggle value="Profile" [routerLink]="['student']" [routerLinkActive]="['active']"
-    [routerLinkActiveOptions]="{exact: true}">Student</mat-button-toggle>
-  <mat-button-toggle value="Add Users" [routerLink]="['lead']" [routerLinkActive]="['active']"
-    [routerLinkActiveOptions]="{exact: true}">Lead</mat-button-toggle>
-  <mat-button-toggle value="Manage Users" [routerLink]="['recruiter']" [routerLinkActive]="['active']"
-    [routerLinkActiveOptions]="{exact: true}">Recruiter</mat-button-toggle>
-  <mat-button-toggle value="Manage Users" [routerLink]="['vendor']" [routerLinkActive]="['active']"
-    [routerLinkActiveOptions]="{exact: true}">Vendor</mat-button-toggle>
-</mat-button-toggle-group>
-<router-outlet></router-outlet>
+<div class="main-dashboard-container">
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="Student" [routerLink]="['student']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Student</mat-button-toggle>
+    <mat-button-toggle value="Lead" [routerLink]="['lead']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Lead</mat-button-toggle>
+    <mat-button-toggle value="Recruiter" [routerLink]="['recruiter']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Recruiter</mat-button-toggle>
+    <mat-button-toggle value="Vendor" [routerLink]="['vendor']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Vendor</mat-button-toggle>
+    <mat-button-toggle value="Add Submission" [routerLink]="['vendor']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Add Submission</mat-button-toggle>
+    <mat-button-toggle value="Submissions" [routerLink]="['vendor']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Submissions</mat-button-toggle>
+    <mat-button-toggle value="Mapped Students" [routerLink]="['vendor']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">Mapped Students</mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="clearfix"></div>
+  <router-outlet></router-outlet>
+</div>

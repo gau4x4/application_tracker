@@ -18,6 +18,8 @@ import { AdminAddSubmissionsComponent } from './components/admin-module/admin-ad
 import { AdminSubmissonsCenterComponent } from './components/admin-module/admin-submissons-center/admin-submissons-center.component';
 import { StudentSubmissionComponent } from './components/dashboard-module/student-submission/student-submission.component';
 import { StudentViewSubmissionComponent } from './components/dashboard-module/student-view-submission/student-view-submission.component';
+import { SubmissionAddMainComponent } from './components/submission-module/submission-add-main/submission-add-main.component';
+import { SubmissionMainCenterComponent } from './components/submission-module/submission-main-center/submission-main-center.component';
 
 
 const routes: Routes = [
@@ -64,14 +66,10 @@ const routes: Routes = [
         component: SubmissionComponent,
         children: [
           {
-            path: 'profile',
-            component: ProfileComponent,
+            path: 'addsubmissions', component: SubmissionAddMainComponent
           },
           {
-            path: 'addsubmissions', component: StudentSubmissionComponent
-          },
-          {
-            path: 'submitioncenter', component: StudentViewSubmissionComponent
+            path: 'submitioncenter', component: SubmissionMainCenterComponent
           }
         ]
       },
