@@ -1,0 +1,115 @@
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Add A Submission
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <section>
+    <div class="enter-sub-form">
+      <form [formGroup]="submissionForm" (ngSubmit)="addNewSubmission()">
+        <div class="row mb-3">
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Submission Date</mat-label>
+              <!-- #docregion toggle -->
+              <input matInput [matDatepicker]="subDatePicker" formControlName="submissionDate">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="subDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #subDatePicker></mat-datepicker>
+              <!-- #enddocregion toggle -->
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Vendor Company</mat-label>
+              <input matInput formControlName="vendorCompany">
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Email Id</mat-label>
+              <input matInput formControlName="emailId">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Phone Number</mat-label>
+              <input matInput formControlName="phoneNumber">
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Implementation Client</mat-label>
+              <input matInput formControlName="implementationClient">
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Client Name</mat-label>
+              <input matInput formControlName="clientName">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Pay Rate</mat-label>
+              <input matInput formControlName="payRate">
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Submitted</mat-label>
+              <mat-select formControlName="isSubmitted">
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Type(Own\Recruiter)</mat-label>
+              <mat-select formControlName="typeOwnRecruiter">
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Status</mat-label>
+              <mat-select formControlName="submissionStatus">
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <mat-form-field>
+              <mat-label>Lead Name</mat-label>
+              <mat-select formControlName="leadName">
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-group col">
+            <label class="mb-5"> </label>
+            <label class="mb-5"> </label>
+            <button type="reset" mat-flat-button color="primary" class="me-2">Reset</button>
+            <button mat-flat-button color="accent" (click)="submissionHandler()">Add
+              Submisson</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</mat-expansion-panel>
+<div class="mb-3"></div>

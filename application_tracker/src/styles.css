@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.main-submission-table>table tr>th {
+    white-space: nowrap;
+}
+
+.main-submission-table>table tr>td {}
+
+.main-submission-center {
+    display: grid;
+    /* grid-template-columns: 1fr 4fr; */
+    /* max-width: 80%; */
+}
+
+.main-submission-table {
+    max-width: 100%;
+    overflow: scroll;
+    padding: 1em;
+}
+
+.enter-sub-form {
+    padding: 2em;
+}
+
+.inner-page-setup {
+    display: grid;
+    padding: 1em;
+    /* max-width: 80%; */
+}
+
+.mat-mdc-form-field {
+    width: 100%;
+}

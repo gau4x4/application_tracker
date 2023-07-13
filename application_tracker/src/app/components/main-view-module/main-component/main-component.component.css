@@ -1,0 +1,3 @@
+.app-main-box {
+    min-height: calc(100vh - 144px);
+}

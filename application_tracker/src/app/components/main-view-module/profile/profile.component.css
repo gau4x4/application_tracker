@@ -1,0 +1,60 @@
+.profile-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.profile-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.profile-title {
+    margin: 4px 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.profile-location {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.profile-bio {
+    margin-top: 16px;
+}
+
+.mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button[mat-button] {
+    margin-left: 8px;
+}

@@ -1,0 +1,12 @@
+.nav-item {
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    background: #ff4081;
+}
+
+.nav-item.active>a {
+    color: #fff !important;
+}

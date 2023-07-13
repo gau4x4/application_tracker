@@ -1,0 +1,350 @@
+<div class="main-submission-center">
+
+  <div class="inner-page-setup">
+    <div class="user-action-menu mb-2">
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="Profile" [routerLink]="['profile']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Profile</mat-button-toggle>
+        <mat-button-toggle value="italic" [routerLink]="['submitioncenter']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Submissions</mat-button-toggle>
+        <mat-button-toggle value="underline" [routerLink]="['addsubmissions']" [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}">Add new submissions</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <router-outlet></router-outlet>
+    <!-- <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Add new Submission
+          </mat-panel-title>
+          <mat-panel-description>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <section>
+          <div class="enter-sub-form">
+            <h1 class="text-primary">Add A Submission</h1>
+            <form>
+              <div class="row mb-3">
+                <div class="form-group col">
+                   <label for="submissionDate">Submission Date</label> 
+                  <input type="date" id="submissionDate" class="form-control" placeholder="First name"
+                    [(ngModel)]="submissionDate" name="submissionDate"> 
+                  <mat-form-field>
+                    <mat-label>Submission Date</mat-label>
+                     #docregion toggle 
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                     #enddocregion toggle 
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                 <label for="vendorCompany">Vendor Company</label> 
+                   <input type="text" id="vendorCompany" class="form-control" placeholder="Last name"
+                    [(ngModel)]="vendorCompany" name="vendorCompany">
+
+                  <mat-form-field>
+                    <mat-label>Vendor Company</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                  <label for="emailId">Email Id</label> 
+                   <input type="email" id="emailId" class="form-control" placeholder="First name" [(ngModel)]="emailId"
+                    name="emailId"> 
+                  <mat-form-field>
+                    <mat-label>Email Id</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col">
+                  <label for="phoneNumber">Phone Number</label> 
+                  <input type="tel" id="phoneNumber" class="form-control" placeholder="First name"
+                    [(ngModel)]="phoneNumber" name="phoneNumber"> 
+                  <mat-form-field>
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                 <label for="implementationClient">Implementation Client</label>
+                   <input type="text" id="implementationClient" class="form-control" placeholder="First name"
+                    [(ngModel)]="implementationClient" name="implementationClient">
+                  <mat-form-field>
+                    <mat-label>Implementation Client</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                  <label for="clientName">Client Name</label>
+                   <input type="text" id="clientName" class="form-control" placeholder="First name"
+                    [(ngModel)]="clientName" name="clientName"> 
+                  <mat-form-field>
+                    <mat-label>Client Name</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col">
+                  <label for="payRate">Pay Rate</label> 
+                  <input type="text" id="payRate" class="form-control" placeholder="First name" [(ngModel)]="payRate"
+                    name="payRate"> 
+                  <mat-form-field>
+                    <mat-label>Pay Rate</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                 
+                  <mat-form-field>
+                    <mat-label>Submitted</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                
+                  <mat-form-field>
+                    <mat-label>Type(Own\Recruiter)</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col">
+                 
+                  <mat-form-field>
+                    <mat-label>Status</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                
+                  <mat-form-field>
+                    <mat-label>Lead Name</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                
+                  <label class="mb-5"> </label>
+                  <button type="reset" mat-flat-button color="primary" class="me-2">Reset</button>
+                  <button mat-flat-button color="accent" (click)="submissionHandler()">Add
+                    Submisson</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </section>
+      </mat-expansion-panel>
+      <div class="mb-3"></div>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Filter Submission Table
+          </mat-panel-title>
+          <mat-panel-description>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <section>
+          <div class="submission-filter-table">
+            <form>
+              <div class="row mb-3">
+                <div class="form-group col">
+                   <mat-form-field>
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date">
+                      <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field> 
+                </div>
+                <div class="form-group col">
+                  <mat-form-field>
+                    <mat-label>Select Lead</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                  <mat-form-field>
+                    <mat-label>Select Status</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="form-group col">
+                  <mat-form-field>
+                    <mat-label>Select Type</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                  <mat-form-field>
+                    <mat-label>Input</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="form-group col">
+                  <label class="mb-5"> </label>
+                  <button type="reset" mat-flat-button color="primary" class="me-2">Reset</button>
+                  <button mat-flat-button color="accent" (click)="submissionHandler()">Filter</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+    <router-outlet></router-outlet>
+    <div class="main-submission-table">
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#SubmissionId</th>
+            <th scope="col">SubmissionDate</th>
+            <th scope="col">Vendor Company</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Implementation Partner</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Pay Rate</th>
+            <th scope="col">Submitted</th>
+            <th scope="col">Type(Own/Recruiter)</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+          <tr>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+            <td scope="col">Lorem</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+  </div>
+</div>

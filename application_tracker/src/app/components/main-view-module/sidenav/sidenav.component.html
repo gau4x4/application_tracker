@@ -1,0 +1,73 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+  <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <span class="fs-4">
+      <i class="bi bi-window-split"></i>
+      Haw manager</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item" [routerLink]="['admin']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-windows"></i>
+        User Manager
+      </a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link link-dark" [routerLink]="['/home']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact: true}">
+        <i class="bi bi-windows"></i>
+        Home
+      </a>
+    </li> -->
+    <li class="nav-item" [routerLink]="['dashboard']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-collection-fill"></i>
+        Dashboard
+      </a>
+    </li>
+    <!-- <li class="nav-item" [routerLink]="['lead']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-file-earmark-person"></i>
+        Leads
+      </a>
+    </li>
+    <li class="nav-item" [routerLink]="['student']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-file-person-fill"></i>
+        Students
+      </a>
+    </li>
+    <li class="nav-item" [routerLink]="['recruiter']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-hdd-network-fill"></i>
+        Recruiter
+      </a>
+    </li>
+    <li class="nav-item" [routerLink]="['vendor']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-buildings"></i>
+        Vendor
+      </a>
+    </li> -->
+    <li class="nav-item" [routerLink]="['operation']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-buildings"></i>
+        Operations
+      </a>
+    </li>
+    <li class="nav-item" [routerLink]="['submission']" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link link-dark">
+        <i class="bi bi-file-break-fill"></i>
+        Submissions
+      </a>
+    </li>
+  </ul>
+</div>
